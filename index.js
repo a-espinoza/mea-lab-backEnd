@@ -8,6 +8,8 @@ app.use(express.static(__dirname ))
 app.use(parser.json({extended: true}));
 app.use(parser.json());
 app.use(parser.urlencoded({extended:true}));
+var cors = require('cors')
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.json({});
